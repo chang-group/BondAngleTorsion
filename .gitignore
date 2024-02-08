@@ -136,3 +136,6 @@ dmypy.json
 *.pdf
 *.ipynb
 *.vmd
+*.pdb
+*.dcd
+*.prmtop
