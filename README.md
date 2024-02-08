@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="docs/figs/logo.png">
+  <img src="docs/figs/logo_tr.png">
 </p>
 
 ## BAT internal coordinate calculation libary compatible with pytorch. It offers:
