@@ -44,32 +44,6 @@ root_XYZ_inds = R._root_XYZ_inds
 t = 0
 for (i, j, k, l) in zip(R._ag1, R._ag2, R._ag3, R._ag4):
     if i.name == 'N':
-        print(tor_indxs_orig[t], \
-              (i.resname, i.name), (j.resname, j.name), \
-              (k.resname, k.name), (l.resname, l.name), t)
-    t += 1    
-```
-
-    [176, 178, 198, 200] ('ARG', 'N') ('ARG', 'CA') ('ARG', 'CB') ('ARG', 'HB2') 20
-    [159, 178, 198, 200] ('MET', 'N') ('MET', 'CA') ('MET', 'CB') ('MET', 'HB2') 37
-    [144, 178, 198, 200] ('GLU', 'N') ('GLU', 'CA') ('GLU', 'CB') ('GLU', 'HB2') 52
-    [133, 178, 198, 200] ('SER', 'N') ('SER', 'CA') ('SER', 'CB') ('SER', 'HB2') 63
-    [114, 178, 198, 200] ('LEU', 'N') ('LEU', 'CA') ('LEU', 'CB') ('LEU', 'HB2') 82
-    [107, 178, 198, 200] ('GLY', 'N') ('GLY', 'CA') ('GLY', 'C') ('LEU', 'N') 88
-    [93, 178, 198, 200] ('THR', 'N') ('THR', 'CA') ('THR', 'CB') ('THR', 'HB') 103
-    [81, 178, 198, 200] ('ASP', 'N') ('ASP', 'CA') ('ASP', 'CB') ('ASP', 'HB2') 115
-    [61, 178, 198, 200] ('PHE', 'N') ('PHE', 'CA') ('PHE', 'CB') ('PHE', 'HB2') 135
-    [37, 178, 198, 200] ('TRP', 'N') ('TRP', 'CA') ('TRP', 'CB') ('TRP', 'HB2') 159
-    [26, 178, 198, 200] ('SER', 'N') ('SER', 'CA') ('SER', 'CB') ('SER', 'HB2') 170
-    [12, 178, 198, 200] ('PRO', 'N') ('PRO', 'CD') ('PRO', 'CG') ('PRO', 'HG2') 184
-    [0, 178, 198, 200] ('ALA', 'N') ('ALA', 'CA') ('ALA', 'CB') ('ALA', 'HB1') 194
-
-
-
-```python
-t = 0
-for (i, j, k, l) in zip(R._ag1, R._ag2, R._ag3, R._ag4):
-    if i.name == 'N':
         print(tor_indxs[t], \
               (i.resname, i.name), (j.resname, j.name), \
               (k.resname, k.name), (l.resname, l.name), t)
