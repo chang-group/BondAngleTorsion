@@ -18,6 +18,10 @@ from BAT import BATmain, GetFragmentTorInds
 from MDAnalysis.analysis.bat import BAT
 ```
 
+
+    
+
+
 ### Load data and construct torsion list with MDAnalysis
 
 
@@ -127,7 +131,7 @@ print('BAT to Coords reconstruction Err --' , rmsd.item())
 
 ```python
 xyz_new = xyz_new.detach().cpu().numpy()
-out_path = 'out.dcd'
+out_path = './dat/out.dcd'
 with mda.Writer(out_path, n_atoms=u.atoms.n_atoms) as w:
     i = 0
     for ts in u.trajectory:
