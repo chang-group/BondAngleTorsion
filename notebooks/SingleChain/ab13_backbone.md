@@ -13,17 +13,20 @@ import nglview as nv
 from nglview import NGLWidget
 import warnings
 warnings.filterwarnings("ignore")
-
 from BAT import BATmain, bb_tor_inds
-from MDAnalysis.analysis.bat import BAT 
+
 ```
+
+
+    
+
 
 ### Load data and construct torsion list with MDAnalysis
 
 
 ```python
-data_path = '/data0/talant/AB13/TRAJ/AB13_1000.dcd'
-prmtop_path = '/data0/talant/AB13/TRAJ/AB13.prmtop'
+data_path = './dat/AB13.dcd'
+prmtop_path = './dat/AB13.prmtop'
 device = 'cpu'
 
 u = mda.Universe(prmtop_path,data_path)
@@ -42,7 +45,7 @@ root_XYZ_inds = [0,1,2]
 
 
 ```python
-for i, v in enumerate(tor_ids):
+for i, v in enumerate(tor_indxs):
     if i  < 10:
         print(v)
 ```
@@ -80,7 +83,7 @@ xyz.shape
 
 
 
-    torch.Size([1001, 39, 3])
+    torch.Size([101, 39, 3])
 
 
 
@@ -112,7 +115,7 @@ rmsd = (xyz - xyz_new).pow(2).mean().sqrt()
 print('BAT to Coords reconstruction Err --' , rmsd.item())
 ```
 
-    BAT to Coords reconstruction Err -- 2.804330279104761e-06
+    BAT to Coords reconstruction Err -- 2.8308527362241875e-06
 
 
 #### Reconstruction is almost 100% accurate!
