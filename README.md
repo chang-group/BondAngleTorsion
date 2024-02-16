@@ -17,6 +17,11 @@
 4. From sequence to BAT (in progress..)
 
 
+<p align="center">
+  <img src="docs/figs/Benchmark.png">
+</p>
+    
+
 ## Dependancies
 - `python` 3.8 >
   - `MDAnalysis`
