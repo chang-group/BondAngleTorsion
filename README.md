@@ -19,6 +19,8 @@
 
 <p align="center">
   <img src="tests/benchmark/Benchmark.png">
+  <imgcaption>BAT performance benchmark shown for five different protein
+  		 trajectories with 10000 frames and varying size.
 </p>
     
 
