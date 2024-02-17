@@ -27,6 +27,7 @@
 ## Dependancies
 - `python` 3.8 >
   - `MDAnalysis`
+  - `torch`
 
 ## Installation
 
