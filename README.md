@@ -18,7 +18,7 @@
 
 
 <p align="center">
-  <img src="docs/figs/Benchmark.png">
+  <img src="tests/benchmark/Benchmark.png">
 </p>
     
 
