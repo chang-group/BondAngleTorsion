@@ -15,15 +15,33 @@ def GetFragmentTorInds(R, sel_atom = 'N'):
     tor_indxs = R._torsion_XYZ_inds
         
     m = 0
+    
     for i in R._ag1:
         if i.name == sel_atom :
             tor_indxs[m][1] = R._root_XYZ_inds[2]
             tor_indxs[m][2] = R._root_XYZ_inds[1]
             tor_indxs[m][3] = R._root_XYZ_inds[0]
         m = m + 1
-    
+
+        
     return tor_indxs
 
+def GetFragmentTorIndsSS(R, resid_list, sel_atom = 'N' ):
+    """
+    Attach each selected atom to root based atoms via pseudo bond
+    by modifying torsion list
+    """
+    tor_indxs = R._torsion_XYZ_inds
+        
+    m = 0
+    for i in R._ag1:
+        if (i.name == sel_atom) & ( i.resid in resid_list):
+            tor_indxs[m][1] = R._root_XYZ_inds[2]
+            tor_indxs[m][2] = R._root_XYZ_inds[1]
+            tor_indxs[m][3] = R._root_XYZ_inds[0]
+        m = m + 1
+        
+    return tor_indxs
 
 
 if __name__=='__main__':
