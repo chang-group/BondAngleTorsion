@@ -114,7 +114,7 @@ class BATmain:
             vp = torch.cross(v32, v21)
             cs = (v21 * v32).sum(dim=-1, keepdims=True)
             
-            sn = (1.0 - cs * cs).sqrt()
+            sn = (1.0 - cs * cs ).sqrt()
             vp = vp / sn
             vu = torch.cross(vp, v21)
 
@@ -181,8 +181,11 @@ def bb_tor_inds(n_atoms):
 if __name__=='__main__':
          
     
-    data_path = '/data0/talant/AB13/TRAJ/AB13_1000.dcd'
-    prmtop_path = '/data0/talant/AB13/TRAJ/AB13.prmtop'
+    #data_path = '/data0/talant/AB13/TRAJ/AB13_1000.dcd'
+    data_path = '/home/talant/Projects/UCRiver/DeepLearning/AB13/TRAJ/AB13_1000.dcd'
+    #prmtop_path = '/data0/talant/AB13/TRAJ/AB13.prmtop'
+    prmtop_path = '/home/talant/Projects/UCRiver/DeepLearning/AB13/TRAJ/AB13.prmtop'
+
     device = 'cpu'
 
     u = mda.Universe(prmtop_path,data_path)
@@ -212,7 +215,7 @@ if __name__=='__main__':
    
 
     xyz_new = xyz_new.detach().cpu().numpy()
-    with mda.Writer('../data/out.dcd', n_atoms=u.atoms.n_atoms) as w:
+    with mda.Writer('./out.dcd', n_atoms=u.atoms.n_atoms) as w:
         i = 0
         for ts in u.trajectory:
             ts.positions = xyz_new[i,:,:]
