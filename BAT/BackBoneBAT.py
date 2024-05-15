@@ -24,8 +24,11 @@ if __name__=='__main__':
      
     from BATmain import BATmain
     
-    data_path = '/data0/talant/AB13/TRAJ/AB13_1000.dcd'
-    prmtop_path = '/data0/talant/AB13/TRAJ/AB13.prmtop'
+    #data_path = '/data0/talant/AB13/TRAJ/AB13_1000.dcd'
+    #prmtop_path = '/data0/talant/AB13/TRAJ/AB13.prmtop'
+    data_path = '/home/talant/Projects/UCRiver/DeepLearning/AB13/TRAJ/AB13_1000.dcd'
+    prmtop_path = '/home/talant/Projects/UCRiver/DeepLearning/AB13/TRAJ/AB13.prmtop'
+
     
     device = 'cpu'
     u = mda.Universe(prmtop_path,data_path)
